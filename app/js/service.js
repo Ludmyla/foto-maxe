@@ -1,4 +1,4 @@
-$(function() {
+(function() {
 	var recordsCount = 10;
 	var loadMoreIndex = 1;
 
