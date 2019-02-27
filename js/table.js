@@ -4,14 +4,14 @@ $(function() {
 	var eventId;
 	var json;
 
-	$.get('/json/get-dates.json').then(function(response) {
+	$.get('json/get-dates.json').then(function(response) {
 		var table = generateTable(response, 0);
 		json = response;
 		$('#dynamicTable').html(table);
 	});
 
 	$('#loadMore').click(function() {
-		$.get('/json/get-dates.json').then(function(response) {
+		$.get('json/get-dates.json').then(function(response) {
 			var table = $('#dynamicTable').html();
 			table += generateTable(response, loadMoreIndex * recordsCount);
 			loadMoreIndex += 1;
